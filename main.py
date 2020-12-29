@@ -49,7 +49,7 @@ while(True):
     nowBkk = nowUtc.astimezone(timezone('Asia/Bangkok'))
     dateNow = nowBkk.date().strftime("%d/%m/%Y")
 
-    print("Current Date {} and Tamp Date {}".format(nowBkk.strtime("%d/%m/%Y %H:%M:%S"),tmpDateTime))
+    print("Current Date {} and Tamp Date {}".format(nowBkk.strftime("%d/%m/%Y %H:%M:%S"),tmpDateTime))
 
     if(tmpDateTime != dateNow):
 
