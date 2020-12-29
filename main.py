@@ -44,11 +44,12 @@ DevNotify by FlyInSpace
         return 'wait for update'
 
 while(True):    
+    print('processing ...')
     nowUtc = datetime.now(timezone('UTC'))
     nowBkk = nowUtc.astimezone(timezone('Asia/Bangkok'))
     dateNow = nowBkk.date().strftime("%d/%m/%Y")
 
-    print("Current Date {} and Tamp Date {}".format(dateNow,tmpDateTime))
+    print("Current Date {} and Tamp Date {}".format(nowBkk.strtime("%d/%m/%Y %H:%M:%S"),tmpDateTime))
 
     if(tmpDateTime != dateNow):
 
@@ -65,7 +66,7 @@ while(True):
 
         else:
 
-            print('Delay 30 minute ...')
-            time.sleep(60*30)
+            print('Delay 5 minute ...')
+            time.sleep(60*5)
 
 
